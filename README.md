@@ -2,7 +2,6 @@
 
 Welcome to my analysis of the data job market, focusing on data analyst roles. This project was created out of a desire to navigate and understand the job market more effectively. It delves into the top-paying and in-demand skills to help find optimal job opportunities for data analysts.
 
-The data sourced from [Luke Barousse's Python Course](https://lukebarousse.com/python) which provides a foundation for my analysis, containing detailed information on job titles, salaries, locations, and essential skills. Through a series of Python scripts, I explore key questions such as the most demanded skills, salary trends, and the intersection of demand and salary in data analytics.
 
 # The Questions
 
@@ -50,9 +49,9 @@ df['job_posted_date'] = pd.to_datetime(df['job_posted_date'])
 df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if pd.notna(x) else x)
 ```
 
-## Filter US Jobs
+## Filter India Jobs
 
-To focus my analysis on the U.S. job market, I apply filters to the dataset, narrowing down to roles based in the United States.
+To focus my analysis on the India job market, I apply filters to the dataset, narrowing down to roles based in the India.
 
 ```python
 df_US = df[df['job_country'] == 'United States']
@@ -179,11 +178,11 @@ plt.show()
 ```
 
 #### Results
-Here's the breakdown of the highest-paid & most in-demand skills for data analysts in the US:
+Here's the breakdown of the highest-paid & most in-demand skills for data analysts in the India:
 
 ![Highest_Paid_and_Most_In_Demand_Skills_for_Data_Analysts_in_India](https://github.com/user-attachments/assets/4f991d71-d7e4-417f-9517-ddae0c74eb49)
 
-*Two separate bar graphs visualizing the highest paid skills and most in-demand skills for data analysts in the US.*
+*Two separate bar graphs visualizing the highest paid skills and most in-demand skills for data analysts in the India.*
 
 #### Insights:
 
@@ -214,7 +213,7 @@ plt.show()
 
 ![Most_Optimal_Skills_for_Data_Analysts_in_the_India](https://github.com/user-attachments/assets/45b01a4e-c0df-4c77-a481-001ccd40f917)
 
-*A scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in the US.*
+*A scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in the India*
 
 #### Insights:
 
